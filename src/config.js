@@ -1,7 +1,7 @@
 // Configuración del calendario
 export const YEAR = new Date().getFullYear()
-export const MONTH = 11 // 0 = enero, 11 = diciembre
-export const TOTAL_DAYS = 24 // pon 25 si quieres incluir Navidad
+export const MONTH = 9 // 0 = enero, 9 = octubre
+export const TOTAL_DAYS = 31
 
 // true: cada día se abre en su fecha. false: todos abiertos desde el principio.
 export const UNLOCK_BY_DATE = true

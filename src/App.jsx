@@ -53,6 +53,7 @@ export default function App() {
           day={openDay}
           data={getDay(openDay)}
           watchedId={watched[openDay]}
+          watchedIds={new Set(Object.values(watched))}
           onWatch={(id) => markWatched(openDay, id)}
           onUnwatch={() => unmark(openDay)}
           onClose={() => setOpenDay(null)}
