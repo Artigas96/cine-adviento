@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useLocalStorage } from './hooks/useLocalStorage'
-import { TOTAL_DAYS, isUnlocked } from './config'
-import { getDay } from './data/movies'
+import { isUnlocked } from './config'
+import { CALENDAR, getDay } from './data/movies'
 import DayCard from './components/DayCard'
 import DayModal from './components/DayModal'
 
@@ -35,7 +35,11 @@ export default function App() {
   const [watched, setWatched] = useLocalStorage(STORAGE_KEY, {})
   const [openDay, setOpenDay] = useState(null)
 
-  const days = Array.from({ length: TOTAL_DAYS }, (_, i) => i + 1)
+  const days = CALENDAR.map((d) => d.day).filter((day) => {
+    const date = new Date(2025, 9, day) // 9 = octubre
+    const dayOfWeek = date.getDay()
+    return dayOfWeek === 0 || dayOfWeek === 6 || day === 30 || day === 31
+  })
   const seenCount = Object.keys(watched).length
 
   const markWatched = (day, movieId) => setWatched((w) => ({ ...w, [day]: movieId }))
@@ -55,11 +59,11 @@ export default function App() {
           Cine de Terror
         </h1>
         <p className="mt-3 text-entrada/80">
-          Cada día de octubre se abre una casilla con películas de terror. Elige una, márcala como vista y sigue
+          Cada fin de semana y el día 30 se abre una casilla con películas de terror. Elige una, márcala como vista y sigue
           con el calendario. ¡Que no te de miedo!
         </p>
         <p className="mt-4 text-sm text-oro">
-          👻 Has visto {seenCount} de {TOTAL_DAYS} películas
+          👻 Has visto {seenCount} de {days.length} películas
         </p>
       </header>
 

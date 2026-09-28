@@ -13,5 +13,9 @@ export const forceUnlock = () =>
 
 export function isUnlocked(day, now = new Date()) {
   if (!UNLOCK_BY_DATE || forceUnlock()) return true
-  return now >= new Date(YEAR, MONTH, day)
+  const date = new Date(YEAR, MONTH, day)
+  const dayOfWeek = date.getDay() // 0 = domingo, 6 = sábado
+  const isWeekend = dayOfWeek === 0 || dayOfWeek === 6
+  const isDay30 = day === 30
+  return (isWeekend || isDay30) && now >= date
 }
