@@ -26,7 +26,7 @@ No hay tests, lint ni typecheck configurados.
 
 ## Estilos
 
-- Tailwind CSS 4 con tema personalizado definido en `src/index.css` mediante `@theme`. Colores: `cortina`, `cortina-claro`, `entrada`, `oro`, `tinta`. Tipografías: `font-display` (Playfair Display) y `font-sans`.
+- Tailwind CSS 4 con tema personalizado definido en `src/index.css` mediante `@theme`. Colores: `cortina`, `cortina-claro`, `entrada`, `oro`, `oro-claro`, `tinta`, `morado`, `morado-claro`, `verde-toxico`. Tipografías: `font-display` (Playfair Display) y `font-sans`. Tema Halloween con decoración flotante (murciélagos, calabazas, arañas, fantasmas) y efectos de brillo.
 
 ## Deploy
 

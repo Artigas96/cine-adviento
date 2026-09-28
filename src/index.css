@@ -2,15 +2,51 @@
 
 /* Paleta y tipografía del proyecto: cámbialas aquí y se aplican en toda la web. */
 @theme {
-  --color-cortina: #3a0f1d;       /* fondo: terciopelo de sala de cine */
-  --color-cortina-claro: #55182b; /* casillas disponibles */
-  --color-entrada: #f4ead8;       /* papel de entrada */
-  --color-oro: #e6b34a;           /* acento: día visto */
-  --color-tinta: #24140f;         /* texto sobre papel */
+  --color-cortina: #0d0a08;           /* fondo: noche cerrada */
+  --color-cortina-claro: #1a120e;     /* casillas disponibles */
+  --color-entrada: #f5e6d0;           /* papel envejecido */
+  --color-oro: #ff8c00;               /* acento: naranja calabaza */
+  --color-oro-claro: #ffb347;         /* naranja claro para glows */
+  --color-tinta: #1a0f0a;             /* texto sobre papel */
+  --color-morado: #6b21a8;            /* morado bruja */
+  --color-morado-claro: #9333ea;      /* morado claro */
+  --color-verde-toxico: #22c55e;      /* verde poción */
   --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 body {
   @apply bg-cortina text-entrada font-sans antialiased;
+  background-image:
+    radial-gradient(ellipse at 20% 20%, rgba(107, 33, 168, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(255, 140, 0, 0.1) 0%, transparent 50%);
+  min-height: 100vh;
+}
+
+/* Animación de flotación para decoraciones */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(255, 140, 0, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(255, 140, 0, 0.6); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-flicker {
+  animation: flicker 2s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
 }
