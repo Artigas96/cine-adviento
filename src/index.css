@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* Paleta y tipografía del proyecto: cámbialas aquí y se aplican en toda la web. */
+@theme {
+  --color-cortina: #3a0f1d;       /* fondo: terciopelo de sala de cine */
+  --color-cortina-claro: #55182b; /* casillas disponibles */
+  --color-entrada: #f4ead8;       /* papel de entrada */
+  --color-oro: #e6b34a;           /* acento: día visto */
+  --color-tinta: #24140f;         /* texto sobre papel */
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  @apply bg-cortina text-entrada font-sans antialiased;
+}
