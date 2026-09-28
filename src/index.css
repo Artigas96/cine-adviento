@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Playfair+Display:wght@400;700&display=swap');
 @import "tailwindcss";
 
 /* Paleta y tipografía del proyecto: cámbialas aquí y se aplican en toda la web. */
@@ -11,7 +12,7 @@
   --color-morado: #6b21a8;            /* morado bruja */
   --color-morado-claro: #9333ea;      /* morado claro */
   --color-verde-toxico: #22c55e;      /* verde poción */
-  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-display: "Nosifer", "Playfair Display", Georgia, serif;
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 

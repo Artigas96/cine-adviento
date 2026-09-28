@@ -51,7 +51,7 @@ export default function App() {
       
       <header className="relative mb-10 max-w-xl">
         <div className="mb-2 text-4xl animate-flicker" aria-hidden="true">🎃</div>
-        <h1 className="font-display text-4xl font-bold sm:text-5xl text-oro drop-shadow-[0_0_10px_rgba(255,140,0,0.5)]">
+        <h1 className="font-display text-3xl sm:text-4xl text-oro drop-shadow-[0_0_10px_rgba(255,140,0,0.5)]">
           Cine de Terror
         </h1>
         <p className="mt-3 text-entrada/80">
