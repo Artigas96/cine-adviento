@@ -43,7 +43,7 @@ export const CALENDAR = [
     ]
   },
   {
-    "day": 5,
+    "day": 3,
     "movies": [
       {
         "id": "tmdb-9297",
@@ -117,7 +117,7 @@ export const CALENDAR = [
     ]
   },
   {
-    "day": 12,
+    "day": 10,
     "movies": [
       {
         "id": "tmdb-521029",
@@ -191,7 +191,7 @@ export const CALENDAR = [
     ]
   },
   {
-    "day": 19,
+    "day": 17,
     "movies": [
       {
         "id": "tmdb-2291",
@@ -265,7 +265,7 @@ export const CALENDAR = [
     ]
   },
   {
-    "day": 26,
+    "day": 24,
     "movies": [
       {
         "id": "tmdb-62214",

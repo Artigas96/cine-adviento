@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useLocalStorage } from './hooks/useLocalStorage'
-import { isUnlocked } from './config'
+import { isUnlocked, YEAR } from './config'
 import { CALENDAR, getDay } from './data/movies'
 import DayCard from './components/DayCard'
 import DayModal from './components/DayModal'
@@ -36,10 +36,10 @@ export default function App() {
   const [openDay, setOpenDay] = useState(null)
 
   const days = CALENDAR.map((d) => d.day).filter((day) => {
-    const date = new Date(2025, 9, day) // 9 = octubre
+    const date = new Date(YEAR, 9, day) // 9 = octubre
     const dayOfWeek = date.getDay()
-    return dayOfWeek === 0 || dayOfWeek === 6 || day === 30 || day === 31
-  })
+    return dayOfWeek === 0 || dayOfWeek === 6 || day === 30
+  }).sort((a, b) => a - b)
   const seenCount = Object.keys(watched).length
 
   const markWatched = (day, movieId) => setWatched((w) => ({ ...w, [day]: movieId }))
